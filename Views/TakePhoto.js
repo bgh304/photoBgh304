@@ -35,7 +35,7 @@ export default function TakePhoto({ navigation }) {
           <View style={{ flex: 1 }}>
             <Camera style={{ flex: 2 }} ref={camera} />
             <Button title='Take photo' onPress={takePhoto} />
-            <Button title='Set photo info' onPress={() => navigation.navigate('SavePhoto', { data: photoName })} />
+            <Button title='Save photo info' onPress={() => navigation.navigate('SavePhoto', { data: photoName })} />
           </View>
         ) : (
           <Text>No acces to camera</Text>

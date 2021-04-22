@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import MainScreen from './Views/MainScreen';
 import TakePhoto from './Views/TakePhoto';
 import SavePhoto from './Views/SavePhoto';
+import WatchPhoto from './Views/WatchPhoto';
+import MapScreen from './Views/MapScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +17,8 @@ export default function App() {
         <Stack.Screen name='MainScreen' component={MainScreen} />
         <Stack.Screen name='TakePhoto' component={TakePhoto} />
         <Stack.Screen name='SavePhoto' component={SavePhoto} />
+        <Stack.Screen name='WatchPhoto' component={WatchPhoto} />
+        <Stack.Screen name='MapScreen' component={MapScreen} />
       </Stack.Navigator>
     </NavigationContainer> 
   );
