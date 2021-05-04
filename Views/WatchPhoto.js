@@ -21,7 +21,7 @@ console.log(route.params.data);
       </View>
       <View style={{ width: '100%' }} >
         <Button raised icon={{ name: 'place' }} title="LOCATION"
-          onPress={() => navigation.navigate('MapScreen', {data: route.params.data.location})}
+          onPress={() => navigation.navigate('Map location', {data: route.params.data.location})}
         />
       </View>
     </View>

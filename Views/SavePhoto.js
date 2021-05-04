@@ -11,6 +11,7 @@ export default function SavePhoto({ navigation, route }) {
   });
 
   return (
+    
     <View style={styles.container}>
       <View style={styles.image} >
         <Image
@@ -22,14 +23,14 @@ export default function SavePhoto({ navigation, route }) {
       <View style={{ width: '100%' }}>
         <Input placeholder='Enter name' label='NAME' onChangeText={name => setPhoto({...photo, name: name})}
           value={photo.name.toString()}
-        />
+        />        
         <Input placeholder='Enter desciption' label='DESCRIPTION' onChangeText={description => setPhoto({...photo, description: description})}
           value={photo.description.toString()}
         />
         <Input placeholder='Enter location' label='LOCATION' onChangeText={location => setPhoto({...photo, location: location})}
           value={photo.location.toString()}
         />
-        <Button raised icon={{name: 'save'}} title="SAVE PHOTO" onPress={() => navigation.navigate('MainScreen', {data: photo})} />
+        <Button raised icon={{name: 'save'}} title="SAVE PHOTO" onPress={() => navigation.navigate('Photoz n Data', {data: photo})} />
       </View>
     </View>
   )

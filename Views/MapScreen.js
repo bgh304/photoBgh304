@@ -42,7 +42,7 @@ export default function MapScreen({ route }) {
       region={region} >
       <Marker
         coordinate={laLo}
-        title='Location' />
+        title={route.params.data} />
     </MapView>
   );
 }

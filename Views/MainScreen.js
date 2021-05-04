@@ -62,7 +62,7 @@ export default function MainScreen({ navigation, route }) {
         <ListItem.Subtitle style={{ fontSize: 11 }}>{item.location}</ListItem.Subtitle>
       </ListItem.Content>
       <ListItem.Content style={{ alignItems: 'center' }}>
-        <ListItem.Title style={{ color: '#2E75AC', fontWeight: 'bold' }} onPress={() => navigation.navigate('WatchPhoto', { data: item })} >WATCH</ListItem.Title>
+        <ListItem.Title style={{ color: '#2E75AC', fontWeight: 'bold' }} onPress={() => navigation.navigate('Watch photo', { data: item })} >WATCH</ListItem.Title>
       </ListItem.Content>
       <ListItem.Content style={{ alignItems: 'flex-end' }}>
         <Icon name='delete' color='red' onPress={() => deleteItem(item.id)} />
@@ -85,17 +85,17 @@ export default function MainScreen({ navigation, route }) {
 
   return (
     <View style={styles.container} >
+      <Divider style={{ height: '2%', backgroundColor: '#fff' }} />
       <View style={styles.container} >
-        <Button raised icon={{ name: 'camera' }} title='TAKE PHOTO' onPress={() => navigation.navigate('TakePhoto')} />
-        <Divider style={{ height: '5%', backgroundColor: '#fff' }} />
+        <Button raised icon={{ name: 'camera' }} title='TAKE PHOTO' onPress={() => navigation.navigate('Take photo')} />
+        <Divider style={{ height: '10%', backgroundColor: '#fff' }} />
         <Header
-          centerComponent={{ text: 'PHOTOS', style: { color: '#fff', fontSize: 30 } }}
+          centerComponent={{ text: 'PHOTOS', style: { color: '#fff', fontSize: 40, marginTop: '-15%' } }}
         />
-        <Divider style={{ height: '2%', backgroundColor: '#fff' }} />
       </View>
       <View style={styles.flatList} >
         <FlatList
-          style={{ marginLeft: '0%', width: '100%' }}
+          style={{ width: '100%' }}
           keyExtractor={item => item.id.toString()}
           renderItem={renderItem}
           data={items}
@@ -112,7 +112,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    marginTop: '5%',
   },
   flatList: {
     flex: 3,
